@@ -1,4 +1,4 @@
-import Data.List
+Data import.List
 
 data NtDNA = Ad | Td | Gd | Cd deriving (Eq)
 data NtRNA = Ar | Ur | Gr | Cr deriving (Eq)
