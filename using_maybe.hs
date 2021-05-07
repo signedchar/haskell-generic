@@ -14,6 +14,7 @@ addX :: Maybe Int -> Int -> Maybe Int
 addX (Just x) y = fmap (+y) (Just x)
 
 -- Functor instance with `Maybe a`
+-- f, it is a type constructor
 class Functor f where
   fmap :: (a -> b) -> fa -> fb --method
 
@@ -21,6 +22,8 @@ data Maybe a = Nothing | Just a
 
 fmap :: (a -> b) -> Maybe a -> Maybe b
 
+-- g it's a function
+-- (Just _) is the functor
 instance Functor Maybe where
-  fmap f (Just x) = Just (f x)
-  fmap f Nothing = Nothing
+  fmap g (Just x) = Just (g x)
+  fmap g Nothing = Nothing
