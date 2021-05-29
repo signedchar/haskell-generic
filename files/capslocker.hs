@@ -1,6 +1,5 @@
-import Control.Monad
-import Data.Char
+import Data.Char (toUpper)
 
-main = forever $ do
-  input <- getLine
-  putStrLn $ map toUpper input
+main = do
+  contents <- getContents
+  putStr (map toUpper contents)
